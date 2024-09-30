@@ -1,0 +1,15 @@
+{{ if or .Params.viewimage (and .Site.Params.viewimage.enable (ne .Params.viewimage false)) }}
+{{ partial "viewimage.html" . }}
+{{ end }}
+
+{{ if or .Params.math (and .Site.Params.math.enable (ne .Params.math false)) }}
+{{ partial "math.html" . }}
+{{ end }}
+
+{{ if or .Params.diagram (and .Site.Params.diagram.enable (ne .Params.diagram false)) }}
+{{ partial "diagram.html" . }}
+{{ end }}
+
+{{ if or .Params.comment (and .Site.Params.comment.enable (ne .Params.comment false)) }}
+{{ partial "comment.html" . }}
+{{ end }}

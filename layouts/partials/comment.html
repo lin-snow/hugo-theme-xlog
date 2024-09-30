@@ -1,0 +1,129 @@
+<!-- slot -->
+<div id="comment"></div>
+
+<!-- Artalk -->
+{{ if eq .Site.Params.comment.provider "artalk" }}
+{{ with .Site.Params.comment.artalk }}
+<link href="/lib/artalk/Artalk.css" rel="stylesheet" />
+<script src="/lib/artalk/Artalk.js"></script>
+
+<!-- 主题样式适配 -->
+
+
+<script>
+  Artalk.init({
+    el: '#comment',
+    pageKey: '{{ .Permalink }}',
+    pageTitle: '{{ .Title }}',
+    server: '{{ .server }}',
+    site: '{{ .site }}',
+    // ...你的其他配置
+  })
+</script>
+{{ end }}
+{{ end }}
+
+<!-- Waline -->
+{{ if eq .Site.Params.comment.provider "waline" }}
+{{ with .Site.Params.comment.waline }}
+
+<!-- 样式文件 -->
+<link
+  rel="stylesheet"
+  href="/lib/waline/waline.css"
+/>
+<!-- 脚本文件 -->
+<script type="module">
+  import { init } from '/lib/waline/waline.js';
+
+  init({
+    // options
+    el: '#comment',
+    serverURL: '{{ .serverURL }}',
+    dark: false,
+    lang: 'zh-CN'
+  });
+</script>
+{{ end }}
+{{ end }}
+
+<!-- Twikoo -->
+{{ if eq .Site.Params.comment.provider "twikoo" }}
+{{ with .Site.Params.comment.twikoo }}
+<script src="/lib/twikoo/twikoo.all.min.js"></script>
+<script>
+twikoo.init({
+  envId: '{{ .envId }}', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+  el: '#comment', // 容器元素
+  region: '{{ .region }}', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+  // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+  lang: ' {{ .lang }}', // 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+})
+</script>
+{{ end }}
+{{ end }}
+
+<!-- Giscus -->
+{{ if eq .Site.Params.comment.provider "giscus" }}
+{{ with .Site.Params.comment.giscus }}
+<script>
+    const s = document.createElement("script")
+    s.src = "https://giscus.app/client.js"
+    s.crossOrigin = "anonymous"
+    s.async = true
+    s.setAttribute("data-repo", "{{ .repo }}")
+    s.setAttribute("data-repo-id", "{{ .repoId }}")
+    s.setAttribute("data-category", "{{ .category }}")
+    s.setAttribute("data-category-id", "{{ .categoryId }}")
+    s.setAttribute("data-mapping", "{{ .mapping }}")
+    s.setAttribute("data-strict", "0")
+    s.setAttribute("data-reactions-enabled", "{{ cond .reactions 1 0 }}")
+    s.setAttribute("data-emit-metadata", "{{ cond .metadata 1 0 }}")
+    s.setAttribute("data-input-position", "{{ .inputPosition }}")
+    s.setAttribute("data-theme", window.minima_theme + "_protanopia")
+    s.setAttribute("data-lang", "en")
+    s.setAttribute("data-loading", "lazy")
+    document.getElementById("comment").appendChild(s)
+</script>
+{{ end }}
+{{ end }}
+
+<!-- Utterances -->
+{{ if eq .Site.Params.comment.provider "utterances" }}
+{{ with .Site.Params.comment.utterances }}
+<script>
+    const s = document.createElement("script")
+    s.src = "https://utteranc.es/client.js"
+    s.crossOrigin = "anonymous"
+    s.async = true
+    s.setAttribute("repo", "{{ .repo }}")
+    s.setAttribute("issue-term", "{{ .issueTerm }}")
+    s.setAttribute("label", "{{ .label }}")
+    s.setAttribute("theme", "github-" + window.minima_theme)
+    document.getElementById("comment").appendChild(s)
+</script>
+{{ end }}
+{{ end }}
+
+<!-- Disqus -->
+{{ if eq .Site.Params.comment.provider "disqus" }}
+{{ with .Site.Params.comment.disqus }}
+<div id="disqus_thread" class="mt-8 mb-8"></div>
+<script type="text/javascript">
+    // Don't ever inject Disqus on localhost--it creates unwanted
+    // discussions from 'localhost:1313' on your Disqus account...
+    if (window.location.hostname == "localhost")
+        return;
+
+    const dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+
+    const disqus_shortname = '{{ .shortname }}';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    document.getElementById("comment").appendChild(dsq);
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+{{ end }}
+{{ end }}

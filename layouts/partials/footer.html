@@ -1,0 +1,45 @@
+<footer class="mt-8 mb-8">
+  <div class="container mx-auto">
+    <div class="mt-8 flex flex-col-reverse sm:flex-row sm:justify-between items-center">
+      <div class="text-center sm:text-left">
+        <p class="mt-0 text-sm">{{ .Site.Copyright }}.</p>
+        <p class="mt-0 text-xs">
+          Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> v{{ .Site.Hugo.Version }}
+          and <a href="https://github.com/lin-snow/hugo-theme-xlog" target="_blank" rel="noopener noreferrer">Xlog</a>
+          {{ if .Site.Params.icp.enable }}
+          {{ with .Site.Params.icp }}
+              <br>
+              <a href="{{ .icpurl }}" target="_blank">{{ .icpinfo }}</a>
+          {{ end }}
+          {{ end }}
+        </p>
+      </div>
+      
+      <p class="flex items-center mt-0">
+        {{ range $_, $key := .Site.Params.Social }}
+          <a class="icon ml-1 mr-1" href="{{ $key.url }}" title="{{ $key.name }}">
+          {{ if $key.svg }}
+            {{ $key.svg | safeHTML }}
+          {{ else }}
+            {{ index $.Site.Data.svg $key.name | safeHTML }}
+          {{ end }}
+          </a>
+        {{ end }}
+      </p>
+    </div>
+    
+          
+  </div>
+
+  <!-- 图片居中 -->
+  <script>
+    const paragraphs = document.querySelectorAll('article.md p');
+
+    paragraphs.forEach(p => {
+        // 判断 p 标签中是否包含 img 标签
+        if (p.querySelector('img')) {
+            p.classList.add('has-image'); // 添加居中和有图片的样式
+        } 
+    });
+</script>
+</footer>

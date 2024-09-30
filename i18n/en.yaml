@@ -1,0 +1,30 @@
+recent:
+  other: Recent Posts
+older:
+  other: Older Posts
+
+/:
+  other: Home
+about:
+  other: About
+categories:
+  other: Categories
+tags:
+  other: Tags
+series:
+  other: Series
+search:
+  other: Search
+
+timeformat:
+  other: Jan 02, 2006
+
+paginator:
+  prev:
+    other: Newer
+  next:
+    other: Older
+
+post:
+  at:
+    other: Post at

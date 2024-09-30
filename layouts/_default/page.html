@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="container mx-auto">
+  <h1 class="text-4xl font-extrabold mt-6 mb-6">{{ .Title }}</h1>
+
+  <p>{{ .Description | markdownify | safeHTML }}</p>
+  {{ .Content }}
+  
+  {{ partial "plugin.html" . }}
+</div>
+{{ end }}

@@ -1,0 +1,23 @@
+<header class="mt-3 mb-6">
+  <div class="container mx-auto">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        {{ if .Site.Params.brand }}
+        <div class="mr-3 text-3xl"><a href="/">{{ .Site.Params.brand }}</a></div>
+        {{ end }}
+        <div id="theme-switch" class="text-3xl cursor-pointer">{{ index .Site.Params.switch 1 }}</div>
+      </div>
+      <ul class="flex items-center text-base font-bold
+        whitespace-nowrap overflow-x-auto overflow-y-hidden">
+        {{ range .Site.Menus.main }}
+        <li class="ml-2 mr-2"><a href="{{ .Identifier | relLangURL }}">{{ T .Identifier | default .Name }}</a></li>
+        {{ end }}
+      </ul>
+      <ul class="flex item-center text-sm font-bold">
+        {{ range $.Site.Home.AllTranslations }}
+        <li class="ml-2"><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        {{ end}}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,30 @@
+recent:
+  other: 近期文章
+older:
+  other: 历史文章
+
+/:
+  other: 首页
+about:
+  other: 关于
+categories:
+  other: 分类
+tags:
+  other: 标签
+series:
+  other: 系列
+search:
+  other: 搜索
+
+timeformat:
+  other: 2006 年 01 月 02 日
+
+paginator:
+  prev:
+    other: 上一页
+  next:
+    other: 下一页
+
+post:
+  at:
+    other: 发布于

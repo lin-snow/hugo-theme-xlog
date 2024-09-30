@@ -1,0 +1,6 @@
+<img src="{{ .Destination | safeURL }}" 
+    loading="lazy" 
+    decoding="async" 
+    alt="{{ .Text | default `No description` }}" 
+    {{ with .Title }} title="{{ . | safeHTML }}" {{ end }} 
+    {{ if .Page.Site.Params.filterimg.enable }} class="filter-img" {{ end }} />

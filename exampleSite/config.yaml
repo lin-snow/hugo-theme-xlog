@@ -1,0 +1,195 @@
+baseURL: https://example.com/
+languageCode: zh-cn
+title: L1nSn0w's Log
+copyright: © 2020-2024 L1nSn0w
+googleAnalytics:
+# paginate specifies the maximum number of posts displayed on the home page.
+pagination:
+  pagerSize: 5
+# theme specifies the name of the theme to be used.
+theme: xlog
+# defaultContentLanguage specifies the default language to use.
+defaultContentLanguage: zh-cn
+# language.xxx setup
+languages:
+  zh-cn:
+    languageName: cn # will be displayed in the navbar.
+    weight: 1
+    params:
+      greet: :) 你好
+      status: 学牲， 牛马， GDUTer . 
+      description: |
+        这里是 [L1nSn0w](https://linsnow.cn) 的 Log. [我](/pages/about)在这里记录了一些技术、生活、学习、娱乐的内容.
+        这里有我的一些[朋友](/pages/links),还有我捕捉到的一些[瞬间](/pages/gallery),
+        希望你能在这里找到你想要的东西。也希望你能在这里留下你的足迹.  
+  
+  en:
+    languageName: en
+    weight: 2
+    params:
+      status: Student, GDUTer, Crazy. 🎈
+      description: |
+        This is `L1nSn0w`'s `Log`. [Me](/pages/about) here records some technology, life, study, and entertainment content.🤔
+        I hope you can find what you want here. 👣
+      greet: :) Hello
+
+params:
+  # greet specifies greeting words.
+  # greet: Hello :)
+  # subtitle speficies a subtitle displayed right after the site title.
+  subtitle:
+  # switch specifies two emojis used as the button toggling color themes.
+  switch: ["🌚", "🌝"]
+  # minima has one dark theme and multiple light themes. defaultTheme specifies
+  # a default light theme to use. currently available options: light, sand, rock, system.
+  defaultTheme: light
+  # displayDate speficies whether or not to display post date on the home page.
+  displayDate: true
+  # displayDescription specifies whether or not to display post description on
+  # the home page.
+  displayDescription: true
+  # selectable specifies if or not your post content can be selected.
+  selectable: true
+  # social is an array containing as many as social accounts to be displayed
+  icp: 
+    enable: true
+    icpurl: https://beian.miit.gov.cn/
+    icpinfo: 粤ICP备12345678
+  # in the buttom of every page.
+  social:
+    - name: "email"
+      url: "mailto:abcd@xx.com"
+    - name: "github"
+      url: "https://github.com/lin-snow"
+    - name: "rss"
+      url: "/index.xml"
+
+  # image in grey style
+  filterimg:
+    enable: true
+
+  # view-image plugin
+  viewimage:
+    enable: true
+
+  # math plugin
+  math:
+    enable: true
+    provider: katex
+
+  # diagram plugin
+  diagram:
+    enable: true
+    provider: mermaid
+
+  # comment plugin
+  comment:
+    enable: true
+    provider: twikoo
+    # check out https://twikoo.js.org/
+    twikoo:
+      envId: https://comment.example.com
+      region: ap-guangzhou # 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+      lang: zh-CN # 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+    # check out https://artalk.js.org/
+    artalk:
+      server: https://artalk.example.com
+      site: L1nSn0w's Log
+    # check out https://waline.js.org/
+    waline:
+      serverURL: 
+      placeholder: 说点什么吧...
+      # check out https://valine.js.org
+    # check out https://disqus.com/
+    disqus:
+      shortname: hugo-minima
+      # check out https://utteranc.es
+    utterances:
+      repo: mivinci/hugo-theme-minima
+      issueTerm: pathname
+      label: comment
+    # check out https://giscus.app
+    giscus: 
+      repo: mivinci/hugo-theme-minima
+      repoId: MDEwOlJlcG9zaXRvcnkzODcxMjM2NDU=
+      category: Comments
+      categoryId: DIC_kwDOFxMJvc4CScQm
+      mapping: pathname
+      inputPosition: buttom # bottom | top
+      reactions: true
+      metadata: false
+    
+
+  # search plugin
+  search:
+    enable: true
+    provider: fuse
+    title: Search
+    placeholder: Enter keywords
+    # check out https://fusejs.io
+    fuse:
+      keys:
+        - title
+        - permalink
+        - summary
+        - content
+      distance: 100
+      location: 0
+      threshold: 0.6
+      ignoreLocation: false
+      isCaseSensitive: false
+      includeScore: false
+      includeMatches: ture
+      minMatchCharLength: 1
+      shouldSort: true
+      findAllMatches: true
+
+  # 霞鹜文楷字体
+  font_cleanwhite:
+    enable: true
+    cdn: https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # <!-- Screen version -->
+
+
+# menu.main is an array containing what is used as the navigator.
+menu:
+  main:
+    - identifier: /
+      name: home
+      weight: 1
+    - identifier: tags
+      name: tags
+      weight: 2
+    - identifier: series
+      name: series
+      weight: 3
+    - identifier: search
+      name: search
+      weight: 4
+
+
+# taxonomies defines ways to classify yout posts. Below are some presets that
+# most bloggers use, so you can replace them with whatever you like.
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+# outputs tells Hugo the kind of files to be rendered.
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# markup.highlight has two keys set to make sure that the syntax highlighting
+# in your posts are rendered correctly, so DO NOT edit them.
+markup:
+  highlight:
+    lineNos: true
+    noClasses: false
+  goldmark:
+    renderHooks:
+      image:
+        enableDefault: true
+      parser:
+        wrapStandAloneImageWithinParagraph: false

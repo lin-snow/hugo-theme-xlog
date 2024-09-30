@@ -1,0 +1,22 @@
+/* 自定义样式 */
+/* 相册样式 */
+.md p:has(> img:nth-child(2)){column-count:2;column-gap:8px;margin:6px 0;}
+.md p:has(> img:nth-child(3)){column-count:3;}
+.md p:has(> img:nth-child(4)){column-count:4;}
+.md p:has(> img:nth-child(5)){column-count:5;}
+.md p:has(> img:nth-child(6)){column-count:4;}
+.md p:has(> img:nth-child(2)) img{display:inherit;}
+.md p:has(> img:nth-child(6)) img{margin-bottom:8px;}
+
+/* 相册全屏样式 */
+.fullscreen{margin-left:calc(490px - 54vw);width:calc(100vw - 65px);column-count:4;column-gap:6px; padding: 1rem 1rem;}
+.fullscreen img{display:inherit;margin-bottom:8px;}
+@media (max-width: 980px){
+	.fullscreen{margin-left: 0;width:auto;column-count:3;}
+}
+
+/* 图片居中 */
+.has-image {
+    text-align: center;
+}
+

@@ -1,0 +1,46 @@
+# Template for the theme.toml configuration of a Hugo theme
+# For more information, see: https://github.com/gohugoio/hugoThemes#themetoml
+
+name = "Xlog"
+license = "MIT"
+licenselink = "https://github.com/mivinci/minima/blob/master/LICENSE"
+description = "Xlog is a clean and minimal Hugo theme inspired by Minima, designed to offer a refined and responsive user experience."
+homepage = "https://github.com/lin-snow/hugo-theme-xlog"
+tags = [
+    "minimal", 
+    "clean", 
+    "blog", 
+    "responsive", 
+    "personal", 
+    "simple", 
+    "minimalist", 
+    "portfolio", 
+    "dark",
+]
+
+features = [
+    "Dark mode", 
+    "Multilingual support", 
+    "KaTeX integration", 
+    "Mermaid diagrams",
+    "Syntax highlighting", 
+    "External link support",
+    "RSS feed generation",
+    "Multi-remark compatibility",
+    "Stable and local-first design",
+    "Reading-friendly layout",
+    "Fast loading optimization",
+    "Highly customizable",
+    "Seamless migration"
+]
+
+min_version = "0.85.0"
+
+[author]
+name = "L1nSn0w"
+homepage = "https://lin-snow.github.io/hugo-theme-xlog"
+
+# Information about the original theme this project was based on
+[original]
+name = "Minima"
+homepage = "https://mivinci.github.io/hugo-theme-minima"

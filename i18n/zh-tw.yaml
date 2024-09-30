@@ -1,0 +1,28 @@
+recent:
+  other: 近期文章
+older:
+  other: 歷史文章
+
+home:
+  other: 首頁
+about:
+  other: 關於
+categories:
+  other: 分類
+tags:
+  other: 標籤
+series:
+  other: 系列
+
+timeformat:
+  other: 2006 年 01 月 02 日
+
+paginator:
+  prev:
+    other: 上一頁
+  next:
+    other: 下一頁
+
+post:
+  at:
+    other: 發佈於

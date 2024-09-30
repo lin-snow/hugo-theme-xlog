@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="container mx-auto">
+  <!-- <h1 class="text-4xl font-extrabold mt-6 mb-6">{{ .Title }}</h1>
+  <div class="mb-6 text-sm flex justify-between ">    
+
+  </div> -->
+  <main class="mb-8">
+    <p>{{ .Description | markdownify | safeHTML }}</p>
+    <article class="md">
+      {{ .Content }}
+    </article>
+  </main>
+  {{ partial "plugin.html" . }}
+</div>
+{{ end }}
