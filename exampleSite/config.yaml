@@ -1,7 +1,7 @@
 baseURL: https://example.com/
 languageCode: zh-cn
-title: L1nSn0w's Log
-copyright: © 2020-2024 L1nSn0w
+title: Hugo-Theme-Xlog
+copyright: © 2020-2024 Xlog
 googleAnalytics:
 # paginate specifies the maximum number of posts displayed on the home page.
 pagination:

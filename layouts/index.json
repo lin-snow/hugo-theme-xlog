@@ -1,6 +1,6 @@
 {{- $.Scratch.Add "index" slice -}}
 {{- range site.RegularPages -}}
-{{- if and (ne .Layout "search") (ne .Layout "page") -}}
+{{- if and (ne .Layout "search") (ne .Layout "page") (ne .Layout "gallery") (ne .Layout "archives") (ne .Layout "links") -}}
   {{- $.Scratch.Add "index" (dict "title" .Title "permalink" .Permalink "summary" .Summary "content" .Plain) -}}
 {{- end -}}
 {{- end -}}

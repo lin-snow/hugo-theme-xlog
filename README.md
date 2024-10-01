@@ -14,7 +14,7 @@ Xlog is a clean and minimal Hugo theme based on [Minima](https://mivinci.github.
 - [x] 🌗 Dark mode
 - [x] 📚 Multilingual support
 - [x] 🎨 Highly customizable
-- [x] 🏳️‍🌈 Syntax highlighting - VSCode Dark+
+- [x] 🏳️‍🌈 Syntax highlighting - Rose Pine Moon
 - [x] 🔢 Mathematical expressions - KaTeX
 - [x] 💹 Diagrams and flowcharts - Mermaid
 - [x] 🧑‍💻 Comment systems - Waline, Twikoo, Artalk, Disqus, Utterances, Giscus
@@ -24,7 +24,7 @@ Xlog is a clean and minimal Hugo theme based on [Minima](https://mivinci.github.
 - [x] ✉️ RSS feed generation
 - [x] ⚡️ Fast loading speed
 - [x] 🔒 High stability and reliability
-- [x] 📄 Multiple single page support (including About, Gallery, Links)
+- [x] 📄 Multiple single page support (including About, Gallery, Links, Archives)
 - [x] 📜 Shortcode support (including fullscreen)
 - [x] 🖼️ Excellent image display support
 
