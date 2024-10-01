@@ -2,7 +2,11 @@ baseURL: https://example.com/
 languageCode: zh-cn
 title: Hugo-Theme-Xlog
 copyright: © 2020-2024 Xlog
-googleAnalytics:
+
+services:
+  googleAnalytics:
+    ID: G-xxxxx
+
 # paginate specifies the maximum number of posts displayed on the home page.
 pagination:
   pagerSize: 5
