@@ -54,11 +54,17 @@ params:
   displayDescription: true
   # selectable specifies if or not your post content can be selected.
   selectable: true
-  # social is an array containing as many as social accounts to be displayed
+
+  author: "author" # author
+  description: "xxxxxxabcd" # site description
+  keywords: ["Blog", "Log", "Hugo", "Theme"]  # site keywords
+
   icp: 
     enable: true
     icpurl: https://beian.miit.gov.cn/
-    icpinfo: 粤ICP备12345678
+    icpinfo: 粤ICP备xxxxxxxx
+
+  # social is an array containing as many as social accounts to be displayed  
   # in the buttom of every page.
   social:
     - name: "email"
