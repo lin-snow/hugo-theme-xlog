@@ -8,7 +8,7 @@
     background-size: 57px;
     background-repeat: no-repeat;
     background-color: var(--chroma-bg);
-    background-position: 10px 11px;
+    background-position: 20px 18px;
     
     border-top-left-radius: var(--mainradius);
     border-top-right-radius: var(--mainradius);
@@ -18,11 +18,12 @@
     box-shadow: var(--shadow-l1);
     border-bottom-left-radius: var(--mainradius); 
     border-bottom-right-radius: var(--mainradius);
+    margin: 0.5rem;
 }
 
 
 // /* Background */ .bg { color:#e0def4;background-color:var(--chroma-bg); }
-/* PreWrapper */ .chroma { color:#e0def4;background-color:var(--chroma-bg); border-bottom-left-radius: var(--mainradius); border-bottom-right-radius: var(--mainradius);}
+/* PreWrapper */ .chroma { color:#e0def4;background-color:var(--chroma-bg); border-bottom-left-radius: var(--mainradius); border-bottom-right-radius: var(--mainradius); padding: 0.5rem; overflow: auto;}
 
 /* Error */ .chroma .err { color:#eb6f92 }
 

@@ -185,7 +185,7 @@ outputs:
 # in your posts are rendered correctly, so DO NOT edit them.
 markup:
   highlight:
-    lineNos: true
+    lineNos: false
     noClasses: false
   goldmark:
     renderHooks:
