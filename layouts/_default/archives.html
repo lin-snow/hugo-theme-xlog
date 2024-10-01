@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="container mx-auto">
+    <h1 class="text-4xl font-extrabold mt-6 mb-6">{{ .Title }}</h1>
+    {{ range (.Site.RegularPages.GroupByDate "2006") }}
+    <h3>   
+        {{ if ne .Key "0001" }} 
+        {{ .Key }}
+        {{ end }}
+    </h3>
+        <ul class="archive-list">
+        {{ range (where .Pages "Type" "posts") }}
+        {{ if and (ne .Page.Layout "about") (ne .Page.Layout "search") (ne .Page.Layout "page") (ne .Page.Layout "gallery") (ne .Page.Layout "goods") (ne .Page.Layout "links") (ne .Page.Layout "archives")}}
+        {{ partial "item.html" . }}
+        {{ end }}
+        {{ end }}
+    </ul>
+{{ end }}
+</div>
+{{ end }}

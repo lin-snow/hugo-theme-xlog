@@ -12,7 +12,7 @@
   <div>
     {{ $paginator := .Paginate (where .Site.RegularPages "Kind" "page") }}
     {{ range $paginator.Pages }}
-    {{ if and (ne .Page.Layout "about") (ne .Page.Layout "search") (ne .Page.Layout "page") (ne .Page.Layout "gallery") (ne .Page.Layout "goods") (ne .Page.Layout "links")}}
+    {{ if and (ne .Page.Layout "about") (ne .Page.Layout "search") (ne .Page.Layout "page") (ne .Page.Layout "gallery") (ne .Page.Layout "goods") (ne .Page.Layout "links") (ne .Page.Layout "archives")}}
     {{ partial "item.html" . }}
     {{ end }}
     {{ end }}

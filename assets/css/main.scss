@@ -23,6 +23,7 @@ html {
 }
 
 body {
+  
   margin: 0 16px;
   font-family: var(--font);
   font-weight: 400;
@@ -90,6 +91,7 @@ main .search > input {
   }
 }
 
+
 // 全局滚动条美化
 ::-webkit-scrollbar {
   width: 8px; /* 垂直滚动条的宽度 */
@@ -111,3 +113,4 @@ main .search > input {
 ::-webkit-scrollbar-thumb:hover {
   background: #d17d2e8e; 
 }
+
