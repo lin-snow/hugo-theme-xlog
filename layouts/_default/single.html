@@ -10,8 +10,10 @@
   {{ end }}
   <h1 class="text-4xl font-extrabold mt-6 mb-6">{{ .Title }}</h1>
 
-  <p class="text-sm" style="color: #9d725c8a"> {{ .Description | markdownify | safeHTML }}</p>
-
+  {{ if .Description }}
+  <p class="text-sm" style="color: #9d725c8a"> "{{ .Description | markdownify | safeHTML }} "</p>
+  {{ end }}
+  
   <div class="mb-6 text-sm flex justify-between ">    
     <div>
 
