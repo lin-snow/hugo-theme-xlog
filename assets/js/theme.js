@@ -27,7 +27,7 @@ function switch_theme() {
   const current = localStorage.getItem('theme')
   const next = current === THEME_LIGHT ? THEME_DARK : THEME_LIGHT
 
-  switch_minima_theme(current, next)
+  switch_xlog_theme(current, next)
 
   switch (comment) {
     case 'utterances':
@@ -44,7 +44,7 @@ function switch_theme() {
  * @param {string} current  
  * @param {string} next 
  */
-function switch_minima_theme(current, next) {
+function switch_xlog_theme(current, next) {
   const { classList } = document.documentElement
   const icon = next === THEME_LIGHT ? icon_light : icon_dark;
 

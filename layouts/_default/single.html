@@ -9,6 +9,9 @@
   <br>
   {{ end }}
   <h1 class="text-4xl font-extrabold mt-6 mb-6">{{ .Title }}</h1>
+
+  <p class="text-sm" style="color: #9d725c8a"> {{ .Description | markdownify | safeHTML }}</p>
+
   <div class="mb-6 text-sm flex justify-between ">    
     <div>
 
@@ -31,7 +34,7 @@
     {{ end }}
   </div>
   <main class="mb-8">
-    <p>{{ .Description | markdownify | safeHTML }}</p>
+    
     <article class="md">
       {{ .Content }}
     </article>
