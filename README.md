@@ -2,7 +2,7 @@
 
 Xlog is a clean and minimal Hugo theme based on [Minima](https://mivinci.github.io/hugo-theme-minima) . Check out the [example site](https://le0.me/hugo-theme-minima/).
 
-[demo site](https://log.linsnow.cn)
+[demo site](https://linsnow.cn)
 
 ![screenshot](./images/tn.png)
 
