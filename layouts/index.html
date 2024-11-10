@@ -1,26 +1,37 @@
 {{ define "main" }}
 <main class="container mx-auto">
-  <h2 class="mt-8 text-3xl font-bold">{{ .Site.Params.greet }}</h2>
-  <p class="mt-0 mb-0 text-sm">{{ .Site.Params.status }}</p>
-  <p class="mt-3 mb-3 home-intro">{{ .Site.Params.description | markdownify | safeHTML }}</p>
-  
-  {{ if eq .Paginator.PageNumber 1 }}
-  <h3 class="mt-6 mb-4 text-2xl font-bold">{{ T "recent" }}</h3>
-  {{ else }}
-  <h3 class="mt-6 mb-4 text-2xl font-bold">{{ T "older" }}</h3>
-  {{ end }}
-  <div>
-    {{ $paginator := .Paginate (where .Site.RegularPages "Kind" "page") }}
-    {{ range $paginator.Pages }}
-    {{ if and (ne .Page.Layout "about") (ne .Page.Layout "search") (ne .Page.Layout "page") (ne .Page.Layout "gallery") (ne .Page.Layout "goods") (ne .Page.Layout "links") (ne .Page.Layout "archives")}}
-    {{ partial "item.html" . }}
-    {{ end }}
-    {{ end }}
-    {{ partial "paginator.html" . }}
+  <div class="homepage">
+    <div class="banner">
+      <img class="avatar" src="{{ .Site.Params.avatar }}" alt="{{ .Site.Params.author }}">
+      <div class="avainfo">
+        <p class="text-3xl font-bold greet">{{ .Site.Params.greet }}</p>
+        <p class="mb-0 text-sm status">{{ .Site.Params.status }}</p>
+      </div>
+    </div>
+    <div class="homedes">
+      <p class="home-intro">&#20;&#20;&#20;&#20;&#20;&#20;{{ .Site.Params.description | markdownify | safeHTML }}</p>
+    </div>
   </div>
-  {{ if .Site.Params.friends.feeds }}
-  <h3 class="mt-6 mb-6 text-2xl font-semibold">{{ .Site.Params.friends.title }}</h3>
-  <div id="friends"></div>
-  {{ end }}
+
+  <div class="homeposts">
+    {{ if eq .Paginator.PageNumber 1 }}
+      <h3 class="mt-6 mb-4 text-2xl font-bold">{{ T "recent" }}</h3>
+    {{ else }}
+      <h3 class="mt-6 mb-4 text-2xl font-bold">{{ T "older" }}</h3>
+    {{ end }}
+    <div>
+      {{ $paginator := .Paginate (where .Site.RegularPages "Kind" "page") }}
+      {{ range $paginator.Pages }}
+      {{ if and (ne .Page.Layout "about") (ne .Page.Layout "search") (ne .Page.Layout "page") (ne .Page.Layout "gallery") (ne .Page.Layout "goods") (ne .Page.Layout "links") (ne .Page.Layout "archives")}}
+      {{ partial "item.html" . }}
+      {{ end }}
+      {{ end }}
+      {{ partial "paginator.html" . }}
+    </div>
+    {{ if .Site.Params.friends.feeds }}
+      <h3 class="mt-6 mb-6 text-2xl font-semibold">{{ .Site.Params.friends.title }}</h3>
+      <div id="friends"></div>
+    {{ end }}
+  </div>
 </main>
 {{ end }}

@@ -20,3 +20,57 @@
     text-align: center;
 }
 
+/* 首页 */
+.homepage {
+    width: auto;
+    display: block;
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.avatar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+    box-shadow: var(--imgshadow);
+}
+
+.avatar:hover {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.avainfo {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 40px;
+    left: 13px;
+}
+
+.status {
+    margin-top: 5px;
+    padding: 3px;
+    border-radius: 14px;
+    background-color: #ffd89c30;
+}
+
+.homeposts {
+    margin-top: 2.5rem;
+}
