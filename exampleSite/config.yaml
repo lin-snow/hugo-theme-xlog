@@ -42,8 +42,6 @@ params:
   # greet: Hello :)
   # subtitle speficies a subtitle displayed right after the site title.
   subtitle:
-  # switch specifies two emojis used as the button toggling color themes.
-  switch: ["🌚", "🌝"]
   # minima has one dark theme and multiple light themes. defaultTheme specifies
   # a default light theme to use. currently available options: light, sand, rock, system.
   defaultTheme: light
