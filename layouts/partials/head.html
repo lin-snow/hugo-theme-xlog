@@ -17,7 +17,7 @@
 
   <!-- umami -->
   {{ if .Site.Params.umami.enable }}
-  <script defer src="{{ .Site.Params.umami.url }}/script.js" data-website-id="{{ .Site.Params.umami.id }}"></script>
+  <script defer src="{{ .Site.Params.umami.url }} " data-website-id="{{ .Site.Params.umami.websiteId }}"></script>
   {{ end }}
 
   <!-- 主题颜色配置（根据浅色和深色模式） -->
