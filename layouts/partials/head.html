@@ -15,6 +15,11 @@
   {{ template "_internal/google_analytics.html" . }}
   {{ end }}
 
+  <!-- umami -->
+  {{ if .Site.Params.umami.enable }}
+  <script defer src="{{ .Site.Params.umami.url }}/script.js" data-website-id="{{ .Site.Params.umami.id }}"></script>
+  {{ end }}
+
   <!-- 主题颜色配置（根据浅色和深色模式） -->
   <!-- <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#262d33"> -->
