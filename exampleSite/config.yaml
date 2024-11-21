@@ -160,7 +160,7 @@ params:
   # 霞鹜文楷字体
   font_cleanwhite:
     enable: true
-    cdn: https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # <!-- Screen version -->
+    src: https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # <!-- Screen version -->
 
 
 # menu.main is an array containing what is used as the navigator.
