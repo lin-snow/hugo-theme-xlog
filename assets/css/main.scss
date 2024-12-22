@@ -39,6 +39,10 @@ main {
   animation: showup 0.7s;
 }
 
+main p {
+  font-size: large;
+}
+
 main p a {
   color: var(--prime);
 }
