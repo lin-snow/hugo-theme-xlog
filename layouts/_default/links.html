@@ -1,0 +1,81 @@
+{{ define "main" }}
+<div class="mx-auto links_page">
+  <main class="mb-8">
+    <!-- 上半部分 -->
+    <div class="links-upper">
+      <div class="links-upper-content">
+        <!-- 左半部分 -->
+        <div class="links-left">
+          <!-- 友链页简介 -->
+          <div class="links-intro">
+            <h1>🥳友情链接:</h1>
+            <p>
+              这里是我的友情链接页面，欢迎各位博主互换友链，一起交流学习.
+              <br />
+              注：若失联的友链请联系我，我会及时处理！（如果发现链接下了可能是站点失联无法打开）
+            </p>
+          </div>
+          <!-- 博主个人信息 -->
+          <div class="links-info">
+            <h1>😎本站友链信息：</h1>
+            <p>站点名称：L1nSn0w</p>
+            <p>站点地址：https://linsnow.cn/</p>
+            <p> 站点简介： 无限进步！🎈 </p>
+            <p>站点头像：https://linsnow.cn/avatar.png</p>
+          </div>
+        </div>
+
+        <!-- 右半部分 -->
+        <div class="links-right">
+          <!-- 博主大头像 -->
+          <!-- 最外层容器 -->
+          <!-- 最外层容器 -->
+          <div class="links-scene-container">
+            <!-- 次外层 -->
+            <div
+              id="links-avatar-scene"
+              data-hover-only="true"
+              data-relative-input="true"
+              data-friction-x="0.02"
+              data-friction-y="0.02"
+            >
+              <!-- 次次外层 -->
+              <div
+                data-depth="-2"
+              >
+                <!-- 图片 -->
+                <img
+                  class="links-avatar-img"
+                  src="{{ .Site.Params.tmavatar }}"
+                  alt="avatar"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 下半部分 -->
+    <div class="links-lower">
+      <!-- links-banner -->
+      <h1> 🎉L1nSn0w的小伙伴们 </h1>
+      <!-- links-list -->
+      <div class="links-lower-content">
+        <div class="links-list">
+          {{ range .Site.Data.friends }}
+          <!-- 单个友链卡片 -->
+          <div class="links-friend-card">
+            <a href="{{ .url }}" target="_blank">
+              <img src="{{ .avatar }}" alt="{{ .name }}" class="links-friend-avatar" />
+              <h2 class="links-friend-name">{{ .name }}</h2>
+              <p class="links-friend-description">{{ .description }}</p>
+            </a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+{{ end }}
