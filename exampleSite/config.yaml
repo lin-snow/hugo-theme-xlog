@@ -20,6 +20,8 @@ languages:
     languageName: cn # will be displayed in the navbar.
     weight: 1
     params:
+      avatar: /avatar.png
+      tmavatar: /tmavatar.png # 友链头像
       greet: :) 你好
       status: 学牲， 牛马， GDUTer . 
       description: |
