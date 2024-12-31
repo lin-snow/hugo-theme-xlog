@@ -22,22 +22,13 @@
       <div class="links-upper-content">
         <!-- 左半部分 -->
         <div class="links-left">
-          <!-- 友链页简介 -->
+          <!-- 装备页简介 -->
           <div class="links-intro">
-            <h1>🥳友情链接:</h1>
+            <h1>🪅剁手墙:</h1>
             <p>
-              这里是我的友情链接页面，欢迎各位博主互换友链，一起交流学习.
-              <br />
-              注：若失联的友链请联系我，我会及时处理！（如果发现链接下了可能是站点失联无法打开）
+                欢迎来到我的剁手墙！这里展示了我日常使用和特别满意的装备。  
+                希望这些分享能帮到你，也期待你找到属于自己的心头好！
             </p>
-          </div>
-          <!-- 博主个人信息 -->
-          <div class="links-info">
-            <h1>😎本站友链信息：</h1>
-            <p>站点名称：L1nSn0w</p>
-            <p>站点地址：https://linsnow.cn/</p>
-            <p> 站点简介： 无限进步！🎈 </p>
-            <p>站点头像：https://linsnow.cn/avatar.png</p>
           </div>
         </div>
 
@@ -62,7 +53,7 @@
                 <!-- 图片 -->
                 <img
                   class="links-avatar-img"
-                  src="{{ .Site.Params.tmavatar }}"
+                  src="/pages/goods/macintosh.png"
                   alt="avatar"
                 />
               </div>
@@ -75,18 +66,18 @@
     <!-- 下半部分 -->
     <div class="links-lower">
       <!-- links-banner -->
-      <h1> 🎉L1nSn0wの小伙伴们 </h1>
+      <h1>🔨L1nSn0wの剁手墙</h1>
       <!-- links-list -->
       <div class="links-lower-content">
         <div class="links-list">
-          {{ range .Site.Data.friends }}
+          {{ range .Site.Data.goods }}
           <!-- 单个友链卡片 -->
-          <div class="links-friend-card">
-            <a href="{{ .url }}" target="_blank">
-              <img src="{{ .avatar }}" alt="{{ .name }}" class="links-friend-avatar" />
-              <h2 class="links-friend-name">{{ .name }}</h2>
-              <p class="links-friend-description">{{ .description }}</p>
-            </a>
+          <div class="goods-card">
+              <img src="{{ .image }}" alt="{{ .title }}" class="goods-img" />
+              <div class="goods-info">
+                <h2 class="links-friend-name">{{ .title }}</h2>
+                
+              </div>
           </div>
           {{ end }}
         </div>

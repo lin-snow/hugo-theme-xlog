@@ -320,3 +320,50 @@
 }
 
 /* --------------------- 友链页面 ---------------------- */
+
+/* --------------------- 装备页面 ---------------------- */
+.goods-card {
+  width: 240px;
+  height: 276px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #ffda550f;
+  box-shadow: 2px 8px 45px -12px #f0f4f90d;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.goods-card img {
+  transition: transform 0.7s ease, box-shadow 0.3s ease; /* 过渡效果 */
+  transform: translateY(0); /* 初始位置 */
+}
+
+.goods-card img:hover {
+ //  上移 (放开时缓慢下降)
+  transform: translateY(-8px);
+}
+
+.goods-img {
+  width: auto;
+  height: auto;
+  max-width: 130px;
+  max-height: 130px;
+  display: block;
+  margin: 1rem auto;
+}
+
+.goods-card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.goods-card p {
+  font-weight: 300;
+  text-align: center;
+  margin: 1rem auto;
+}
+/* --------------------- 装备页面 ---------------------- */
