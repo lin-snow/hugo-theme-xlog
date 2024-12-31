@@ -5,7 +5,7 @@
         {{ if .Site.Params.brand }}
         <div class="mr-3 text-3xl"><a href="/">{{ .Site.Params.brand }}</a></div>
         {{ end }}
-        <div id="theme-switch" class="text-3xl cursor-pointer">{{ index .Site.Params.switch 1 }}</div>
+        <div id="theme-switch" class="text-4xl cursor-pointer">{{ index .Site.Params.switch 1 }}</div>
       </div>
       <ul class="flex items-center text-base font-bold text-xl
         whitespace-nowrap overflow-x-auto overflow-y-hidden">
@@ -13,10 +13,13 @@
         <li class="ml-2 mr-2"><a href="{{ .Identifier | relLangURL }}">{{ T .Identifier | default .Name }}</a></li>
         {{ end }}
       </ul>
+      
       <ul class="flex item-center text-sm font-bold">
+        {{ if ge (len .Site.Languages) 1 }}
         {{ range $.Site.Home.AllTranslations }}
         <li class="ml-2"><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
         {{ end}}
+        {{ end }}
       </ul>
     </nav>
   </div>

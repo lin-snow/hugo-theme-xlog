@@ -1,4 +1,20 @@
 {{ define "main" }}
+<!-- 头像视差效果 -->
+{{ $parallax := resources.Get "js/min/parallax.min.js" }}
+{{ $parallax := $parallax | resources.Minify | resources.Fingerprint }}
+<script src="{{ $parallax.Permalink }}" defer></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scene = document.getElementById("links-avatar-scene");
+    new Parallax(scene, {
+      relativeInput: true, // 鼠标相对位置生效
+      hoverOnly: true,     // 仅在悬停时生效
+      frictionX: 0.02,     // X轴阻尼
+      frictionY: 0.02,     // Y轴阻尼
+    });
+  });
+</script>
+
 <div class="mx-auto links_page">
   <main class="mb-8">
     <!-- 上半部分 -->
@@ -79,3 +95,4 @@
   </main>
 </div>
 {{ end }}
+
