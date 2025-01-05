@@ -70,9 +70,11 @@
   position: relative;
   top: 26px;
   box-shadow: var(--imgshadow);
+  filter: grayscale(100%); /* 设置黑白效果 */
 }
 
 .avatar:hover {
+  filter: grayscale(0%); /* 鼠标悬停时恢复彩色 */
   animation: rotate 1.5s linear infinite;
 }
 
