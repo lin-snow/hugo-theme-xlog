@@ -45,10 +45,15 @@ main p {
 }
 
 main p a {
-  color: var(--prime);
+  color: var(--linka);
+  background: #6c7d9114;
+  border-radius: 4px;
+  padding: 2px;
 }
 
+
 main p a:hover {
+  color: var(--linkahover);
   text-decoration: underline;
 }
 
