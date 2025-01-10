@@ -20,6 +20,11 @@
   // highlight
   --chroma-bg: #f7faff;
 
+  ::selection {
+    color: #fff;
+    background: #000000;
+  }
+  
 }
 
 .dark {
@@ -34,6 +39,11 @@
   --pcodebg: #47554a17;
   // highlight
   --chroma-bg: #121204;
+
+  ::selection {
+    color: #000;
+    background: #fff1e3fc;
+  }
 
   // comment
   @media (prefers-color-scheme: dark) {
